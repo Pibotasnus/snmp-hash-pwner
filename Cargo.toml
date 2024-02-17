@@ -1,0 +1,12 @@
+[package]
+name = "snmphashpwner"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+md5 = "0.7.0"
+hex = "0.4.3"
+indicatif = "0.17.8"
+clap = { version = "4.5.1", features = ["derive"] }
