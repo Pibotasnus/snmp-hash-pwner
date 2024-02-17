@@ -1,6 +1,6 @@
 use clap::Parser;
 
-/// Simple program to greet a person
+/// Simple program to crack SNMP MD5 Auth
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 pub struct Config {
