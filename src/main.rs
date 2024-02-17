@@ -10,6 +10,7 @@ use std::process;
 fn main() {
     let config: Config = Config::parse();
     println!("[!] Cracking hash in file: {} ...", config.target_file);
+    println!("[!] Using passwords in file: {} ...", config.dict_file);
     println!(
         "\nThe password is: {}",
         snmp_pwner(config).unwrap_or_else(|err| {

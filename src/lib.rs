@@ -13,14 +13,6 @@ use std::{fs, process};
 mod config;
 mod context;
 
-/// Calculate
-fn hex_string_to_bytes(hex_string: &str) -> Result<Vec<u8>, std::num::ParseIntError> {
-    (0..hex_string.len())
-        .step_by(2)
-        .map(|i| u8::from_str_radix(&hex_string[i..i + 2], 16))
-        .collect()
-}
-
 fn xor_hex_strings(hex1: &str, hex2: &str) -> Result<String, &'static str> {
     if hex1.len() != hex2.len() {
         return Err("Hex strings must be of equal length");
